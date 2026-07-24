@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CardKeep — Tap. Copy. Pay.</title>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: linear-gradient(135deg, #0A1420 0%, #0C3A3E 60%, #14B8A6 160%);
+    min-height: 100vh; color: #E2E8F0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .card {
+    max-width: 520px; margin: 24px; padding: 48px 40px;
+    background: rgba(10, 20, 32, 0.75); border: 1px solid #1E293B;
+    border-radius: 24px; text-align: center;
+    backdrop-filter: blur(8px);
+  }
+  .logo {
+    width: 72px; height: 72px; border-radius: 18px; margin: 0 auto 20px;
+    background: linear-gradient(135deg, #0C3A3E, #14B8A6);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 36px;
+  }
+  h1 { font-size: 32px; color: #F8FAFC; margin-bottom: 6px; }
+  .tagline { color: #5EEAD4; font-size: 17px; font-weight: 600; margin-bottom: 18px; }
+  p { color: #94A3B8; font-size: 15px; line-height: 1.6; margin-bottom: 28px; }
+  .links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .links a {
+    display: inline-block; padding: 12px 22px; border-radius: 12px;
+    background: #14B8A6; color: #042F2E; font-weight: 700;
+    text-decoration: none; font-size: 14px;
+  }
+  .links a.ghost { background: transparent; border: 1px solid #14B8A6; color: #5EEAD4; }
+  .footer { margin-top: 28px; color: #64748B; font-size: 12px; }
+  .footer a { color: #64748B; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">💳</div>
+    <h1>CardKeep</h1>
+    <div class="tagline">Tap. Copy. Pay.</div>
+    <p>Your cards, only on your device. Encrypted, offline, private —
+       CardKeep never touches the internet.<br>
+       Kartlarınız yalnızca cihazınızda. Şifreli, çevrimdışı, özel.</p>
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html" class="ghost">Terms of Use</a>
+    </div>
+    <div class="footer">© 2026 CardKeep · <a href="mailto:pekdemir.mn@gmail.com">pekdemir.mn@gmail.com</a></div>
+  </div>
+</body>
+</html>
