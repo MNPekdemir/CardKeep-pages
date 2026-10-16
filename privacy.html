@@ -43,74 +43,58 @@
     <span class="logo">💳</span>
     <h1>CardKeep — Privacy Policy</h1>
   </header>
-  <p class="sub">Effective date: July 27, 2026 · Yürürlük tarihi: 27 Temmuz 2026</p>
+  <p class="sub">Effective date: October 16, 2026 · Yürürlük tarihi: 16 Ekim 2026</p>
   <p class="lang"><a href="#en">English</a> <a href="#tr">Türkçe</a> <a href="terms.html">Terms of Use →</a></p>
 
   <h2 id="en">English</h2>
   <p>CardKeep is built on a simple principle: your card details belong to you, and only to you.</p>
-
   <h3>1. What we collect</h3>
-  <p>Nothing. CardKeep has no servers of its own, and no card data is ever uploaded. The developer never sees, receives, stores or transmits any of your data. There are no analytics, no advertising SDKs, no crash reporting and no tracking of any kind. The app's only network access belongs to the store's purchase system (App Store / Google Play), used solely for the optional Pro purchase; your card details are never part of it.</p>
-
+  <p>CardKeep has no backend for card data, no advertising or analytics service, and no crash reporting. The developer does not receive your card data. Vault access and camera text recognition run on your device; purchases use Apple or Google services. Android release builds do not have internet permission.</p>
   <h3>2. Where your data lives</h3>
   <p>Card details you enter (card number, expiry date, CVV, cardholder name, labels) are stored only on your device, encrypted with hardware-backed secure storage: Android Keystore with EncryptedSharedPreferences on Android, and Keychain on iOS.</p>
-
   <h3>3. App PIN and biometrics</h3>
   <p>If you enable the app PIN, only a salted cryptographic hash of it is stored in secure storage — the PIN itself is never saved. Biometric checks (fingerprint / Face ID) are performed entirely by the operating system; CardKeep never accesses your biometric data.</p>
-
   <h3>4. Autofill (Android)</h3>
   <p>The Android autofill service reads your saved cards from the same encrypted on-device store to fill forms in other apps at your request. This happens entirely on your device.</p>
-
   <h3>5. Clipboard</h3>
-  <p>When you copy a card detail, it is placed on the system clipboard so you can paste it, and it is cleared about 45 seconds later. On iOS that expiry is enforced by the operating system, so the clipboard is cleared even if CardKeep is no longer running, and the copied value is marked local-only so it is never sent to your other Apple devices through Universal Clipboard. On Android the copied value is marked sensitive, so its content stays hidden in the system copy preview.</p>
-
-  <h3>6. Purchases</h3>
-  <p>The optional one-time Pro upgrade is processed by Apple App Store or Google Play. We do not receive or store any payment information; purchases are governed by the store's own privacy policy.</p>
-
-  <h3>7. Data deletion</h3>
-  <p>Deleting a card removes it permanently. Uninstalling the app permanently deletes all stored data. There is no cloud copy: nobody, including the developer, can recover it.</p>
-
-  <h3>8. Children</h3>
+  <p>When you copy a card detail, it is placed on the system clipboard so you can paste it. On iOS, the system expires the copied item after 45 seconds and prevents sharing it to other devices through Handoff. Android uses a native cleanup timer and marks copied data sensitive; cleanup on older Android versions depends on the app process remaining alive.</p>
+  <h3>6. Camera scanning and optional backups</h3>
+  <p>If you choose Scan card, a temporary camera image is read on your device to detect the card number and expiry. CardKeep does not upload the image and deletes the returned temporary image after scanning. A sufficiently clear cardholder name may be suggested; CVV is entered manually. Interrupted captures are discarded at the next app launch where available.<br>If you export a backup, a password-encrypted file containing your card details, including CVVs, is written only to the location you choose. That location may be a cloud provider you selected in the system file picker. CardKeep does not upload backups automatically. App PIN and Pro entitlement are excluded. You are responsible for protecting the file and its password; forgotten passwords cannot be recovered.</p>
+  <h3>7. Purchases</h3>
+  <p>The optional one-time Pro upgrade is processed by Apple App Store or Google Play. We do not receive or store any payment information; purchases are governed by the store&#x27;s own privacy policy.</p>
+  <h3>8. Data deletion</h3>
+  <p>Deleting a card removes it permanently. Use Settings → Delete all data to erase the vault and app PIN. iOS Keychain data may survive uninstalling the app; uninstalling alone is not a guaranteed erasure. Backups you exported are separate files and must be deleted separately. We cannot recover your vault or backup password.</p>
+  <h3>9. Children</h3>
   <p>CardKeep is not directed at children under 13 and knowingly stores no data about anyone — including children.</p>
-
-  <h3>9. Changes</h3>
-  <p>If this policy changes, the updated version will be published on this page and shipped inside the app with a new effective date.</p>
-
-  <h3>10. Contact</h3>
-  <p>Questions? Email <a href="mailto:mnpekdemir.apps@gmail.com">mnpekdemir.apps@gmail.com</a></p>
+  <h3>10. Changes</h3>
+  <p>If this policy changes, the updated version will be published on the CardKeep pages site and shipped inside the app with a new effective date.</p>
+  <h3>11. Contact</h3>
+  <p>Questions? Email mnpekdemir.apps@gmail.com</p>
 
   <h2 id="tr">Türkçe</h2>
   <p>CardKeep basit bir ilkeyle yazıldı: kart bilgileriniz yalnızca size aittir.</p>
-
   <h3>1. Ne topluyoruz?</h3>
-  <p>Hiçbir şey. CardKeep'in kendine ait sunucusu yoktur ve hiçbir kart bilgisi dışarı yüklenmez. Geliştirici verilerinizi hiçbir şekilde göremez, alamaz, saklayamaz ve iletemez. Analitik yok, reklam SDK'sı yok, çökme raporu yok, hiçbir tür izleme yok. Uygulamadaki tek ağ erişimi mağazanın satın alma sistemine (App Store / Google Play) aittir ve yalnızca isteğe bağlı Pro alımı için kullanılır; kart bilgileriniz bu trafiğin parçası değildir.</p>
-
+  <p>CardKeep&#x27;in kart verileri için bir sunucusu, reklam veya analitik servisi ve çökme raporlaması yoktur. Geliştirici kart bilgilerinizi almaz. Kasa erişimi ve kamera ile metin okuma cihazınızda yapılır; satın almalar Apple veya Google hizmetlerini kullanır. Android yayın derlemelerinde internet izni bulunmaz.</p>
   <h3>2. Verileriniz nerede duruyor?</h3>
-  <p>Girdiğiniz kart bilgileri (kart numarası, son kullanma tarihi, CVV, kart sahibi adı, etiketler) yalnızca cihazınızda, donanım destekli güvenli depoda şifreli olarak saklanır: Android'de Keystore + EncryptedSharedPreferences, iOS'ta Keychain.</p>
-
-  <h3>3. Uygulama PIN'i ve biyometri</h3>
-  <p>Uygulama PIN'ini açarsanız, PIN'in kendisi değil yalnızca tuzlanmış kriptografik özeti güvenli depoda tutulur. Biyometrik doğrulama (parmak izi / Face ID) tamamen işletim sistemi tarafından yapılır; CardKeep biyometrik verinize asla erişemez.</p>
-
+  <p>Girdiğiniz kart bilgileri (kart numarası, son kullanma tarihi, CVV, kart sahibi adı, etiketler) yalnızca cihazınızda, donanım destekli güvenli depoda şifreli olarak saklanır: Android&#x27;de Keystore + EncryptedSharedPreferences, iOS&#x27;ta Keychain.</p>
+  <h3>3. Uygulama PIN&#x27;i ve biyometri</h3>
+  <p>Uygulama PIN&#x27;ini açarsanız, PIN&#x27;in kendisi değil yalnızca tuzlanmış kriptografik özeti güvenli depoda tutulur. Biyometrik doğrulama (parmak izi / Face ID) tamamen işletim sistemi tarafından yapılır; CardKeep biyometrik verinize asla erişemez.</p>
   <h3>4. Otomatik doldurma (Android)</h3>
   <p>Android otomatik doldurma servisi, diğer uygulamalardaki formları sizin isteğinizle doldurmak için kayıtlı kartlarınızı aynı şifreli yerel depodan okur. Bu işlem tamamen cihazınızda gerçekleşir.</p>
-
   <h3>5. Pano</h3>
-  <p>Bir kart bilgisini kopyaladığınızda yapıştırabilmeniz için sistem panosuna yazılır ve yaklaşık 45 saniye sonra temizlenir. iOS'ta bu süreyi işletim sistemi uygular; CardKeep artık çalışmıyor olsa bile pano temizlenir ve kopyalanan değer yalnızca-yerel olarak işaretlendiği için Universal Clipboard aracılığıyla diğer Apple cihazlarınıza asla gönderilmez. Android'de kopyalanan değer hassas olarak işaretlenir; böylece sistemin kopyalama önizlemesinde içeriği görünmez.</p>
-
-  <h3>6. Satın almalar</h3>
+  <p>Bir kart bilgisi sistem panosuna kopyalanır. iOS, kopyalanan öğeyi 45 saniye sonra sistem tarafından siler ve Handoff ile başka cihazlara aktarmaz. Android yerel zamanlayıcı kullanır ve içeriği hassas olarak işaretler; eski Android sürümlerinde temizleme uygulama sürecinin çalışmasına bağlıdır.</p>
+  <h3>6. Kamera ile tarama ve isteğe bağlı yedekleme</h3>
+  <p>Kartı tara seçeneğinde geçici kamera görüntüsündeki kart numarası ve son kullanma tarihi cihazda okunur. CardKeep görüntüyü yüklemez; tarama sonrasında dönen geçici görüntüyü siler. Yeterince net bir kart sahibi adı önerilebilir; CVV elle girilir. Yarım kalan çekimler, mümkün olduğunda sonraki uygulama açılışında atılır.<br>Yedeği dışa aktarırsanız, CVV dahil kart bilgilerini içeren parola ile şifrelenmiş dosya yalnızca seçtiğiniz konuma kaydedilir. Sistem dosya seçicisinde seçtiğiniz konum bir bulut sağlayıcısı da olabilir. CardKeep otomatik yedek yüklemez. Uygulama PIN’i ve Pro hakkı dahil edilmez. Dosyayı ve parolayı korumak sizin sorumluluğunuzdadır; unutulan parola kurtarılamaz.</p>
+  <h3>7. Satın almalar</h3>
   <p>İsteğe bağlı tek seferlik Pro yükseltmesi Apple App Store veya Google Play tarafından işlenir. Hiçbir ödeme bilgisi bize ulaşmaz; satın almalar mağazanın kendi gizlilik politikasına tabidir.</p>
-
-  <h3>7. Veri silme</h3>
-  <p>Bir kartı silmek onu kalıcı olarak kaldırır. Uygulamayı kaldırmak tüm veriyi kalıcı olarak siler. Bulut kopyası yoktur: geliştirici dahil hiç kimse veriyi geri getiremez.</p>
-
-  <h3>8. Çocuklar</h3>
+  <h3>8. Veri silme</h3>
+  <p>Kasayı ve uygulama PIN’ini silmek için Ayarlar → Tüm verileri sil seçeneğini kullanın. iOS Keychain verileri uygulama kaldırıldıktan sonra kalabilir; yalnızca uygulamayı kaldırmak kesin silme sağlamaz. Dışa aktardığınız yedekler ayrı dosyalardır ve ayrıca silinmelidir. Geliştirici kasanızı veya yedek parolanızı kurtaramaz.</p>
+  <h3>9. Çocuklar</h3>
   <p>CardKeep 13 yaş altı çocuklara yönelik değildir ve bilerek hiç kimse hakkında veri saklamaz.</p>
-
   <h3>9. Değişiklikler</h3>
-  <p>Bu politika değişirse güncel sürüm bu sayfada yayımlanır ve yeni yürürlük tarihiyle uygulamanın içine eklenir.</p>
-
+  <p>Bu politika değişirse güncel sürüm CardKeep sayfalar sitesinde yayımlanır ve yeni yürürlük tarihiyle uygulamanın içine eklenir.</p>
   <h3>10. İletişim</h3>
-  <p>Sorularınız için: <a href="mailto:mnpekdemir.apps@gmail.com">mnpekdemir.apps@gmail.com</a></p>
+  <p>Sorularınız için: mnpekdemir.apps@gmail.com</p>
 
   <p class="footer">CardKeep — Tap. Copy. Pay. · <a href="index.html">Home</a> · <a href="terms.html">Terms of Use</a></p>
 </div>
